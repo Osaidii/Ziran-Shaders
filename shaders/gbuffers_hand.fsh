@@ -2,7 +2,6 @@
 
 uniform sampler2D lightmap;
 uniform sampler2D gtexture;
-uniform sampler2D colortex0;
 
 uniform float alphaTestRef = 0.1;
 
@@ -20,4 +19,7 @@ void main() {
 	color.rgb *= texture(lightmap, lmcoord).rgb;
 	lightmapData = texture(lightmap, lmcoord);
 	encodedNormal = vec4(0.5, 0.5, 1.0, 1.0);
+	if (color.a < alphaTestRef) {
+    	discard;
+	}
 }

@@ -1,6 +1,7 @@
 #version 330
 
 uniform sampler2D colortex0;
+uniform sampler2D colortex1;
 uniform sampler2D depthtex0;
 uniform int viewHeight;
 uniform int viewWidth;
@@ -28,11 +29,7 @@ void main() {
 	}
 	vec3 ndcPos = vec3(texcoord.xy, depth) * 2.0 - 1.0;
 	vec3 viewPos = projectAndDivide(gbufferProjectionInverse, ndcPos);
-	vec3 horizontal = viewPos.xyz;
-	float dist = length(horizontal) / far;
+	float dist = length(viewPos) / far;
 	float fogFactor = exp(-fog_density * (1.0 - dist));
 	color.rgb = mix(color.rgb, pow(fogColor, vec3(2.2)), clamp(fogFactor, 0.0, 1.0));
-	vec2 pixel = 1.0 / vec2(viewWidth, viewHeight);
-	vec3 bloom = vec3(0.0);
-	color.rgb += bloom * 0.3;
 }

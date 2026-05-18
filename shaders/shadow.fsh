@@ -18,4 +18,4 @@ void main() {
   if (worldTime <= 12785 || worldTime >= 22900) {
     color.rgb = pow(color.rgb, vec3(1.0 / 2.2));
   }
-  }
+}

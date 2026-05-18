@@ -4,13 +4,13 @@ uniform sampler2D lightmap;
 uniform sampler2D gtexture;
 uniform vec4 entityColor;
 uniform int worldTime;
+uniform bool hasCeiling;
 
 uniform float alphaTestRef = 0.1;
 
 in vec2 lmcoord;
 in vec2 texcoord;
 in vec4 glcolor;
-in vec3 normal;
 
 /* RENDERTARGETS: 0,1,2 */
 layout(location = 0) out vec4 color;
@@ -32,9 +32,10 @@ void main() {
 		night += smoothstep(22000.0, 24000.0, float(worldTime));
 		night = clamp(night, 0.0, 1.0);
 	}
-	float skyLight = lmcoord.y;
-	float caveFactor = 1.0 - skyLight;
-	float brightnessBoost = mix(1.0, 6.0, caveFactor);
-	color.rgb *= brightnessBoost;
+	float caveFactor = 1.0 - lmcoord.y;
+	if (!hasCeiling) {
+		float brightnessBoost = mix(1.0, 6.0, caveFactor);
+		color.rgb *= brightnessBoost;
+	}
 	color.a = 1.0;
 } 
