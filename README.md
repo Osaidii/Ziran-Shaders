@@ -8,5 +8,7 @@ Ziran actually means Nature in Mandarin Chinese.
 This is my first Minecraft related project and This Shaderpack requires Iris Shaders mod to function properly.  
 This is compleltly open-source and free to use meaning anyone can use this shaderpack and never have to pay anything.  
 You can also modify and edit the shader for yourself and contribute the changes if you would want to share the modification with others!  
-To download this shaderpack, you can go the [release](https://github.com/Osaidii/Ziran-Shaders/releases) section of this repository or you can visit [modrinth](https://modrinth.com/project/ziran-shaders) to download this pack.
+To download this shaderpack, you can go the [release](https://github.com/Osaidii/Ziran-Shaders/releases) section of this repository or you can visit [modrinth](https://modrinth.com/project/ziran-shaders) to download this pack.  
+Features included in this shaderpack are dynamic and deffered lighting, aliased shadows, waving vegetation, exponentional fog, and many more.  
+This shaderpack look amazing without the cost of too many frames per second.  
 
