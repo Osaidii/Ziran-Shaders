@@ -1,7 +1,7 @@
 #version 330 compatibility
 #include "libs/shadowDistort.glsl"
 #define SHADOW_RANGE 2
-#define SHADOW_RADIUS 0.8
+#define SHADOW_RADIUS 0.6
 
 uniform sampler2D colortex0;
 uniform sampler2D colortex1;
@@ -81,7 +81,7 @@ vec3 getSoftShadow(vec4 shadowClipPos) {
             vec2 offset = vec2(x, y) * (SHADOW_RADIUS / 8092.0);
             offset = rotation * offset;
             vec4 offsetShadowClipPos = shadowClipPos + vec4(offset, 0.0, 0.0);
-			shadowClipPos.z -= 0.001;
+			offsetShadowClipPos.z -= 0.002;
             offsetShadowClipPos.xyz = distortShadowClipPos(offsetShadowClipPos.xyz);
             vec3 shadowNDCPos = offsetShadowClipPos.xyz / offsetShadowClipPos.w;
             vec3 shadowScreenPos = shadowNDCPos * 0.5 + 0.5;

@@ -32,15 +32,9 @@ void main() {
 		night += smoothstep(22000.0, 24000.0, float(worldTime));
 		night = clamp(night, 0.0, 1.0);
 	}
-	float lightInSky = texture(lightmap, lmcoord).y;
-	bool isCave = false;
-	if (lightInSky < 0.05) {
-		isCave = true;
-	}
-	if (isCave) {
-		color.rgb = vec3(1.0);
-	}
-    float multiplier = mix(1.0, 2.0, night);
-	color.rgb *= multiplier;
+	float skyLight = lmcoord.y;
+	float caveFactor = 1.0 - skyLight;
+	float brightnessBoost = mix(1.0, 6.0, caveFactor);
+	color.rgb *= brightnessBoost;
 	color.a = 1.0;
 } 
