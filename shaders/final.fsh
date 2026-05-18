@@ -17,7 +17,7 @@ void main() {
     bloom *= 0.25;
     float brightness = max(max(base.r, base.g), base.b);
     vec3 finalColor = base;
-    if (brightness > 0.6) {
+    if (brightness > 0.8) {
         finalColor += bloom * 0.4;
     }
     finalColor = pow(finalColor, vec3(1.0 / 2.2));
