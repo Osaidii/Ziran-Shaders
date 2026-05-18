@@ -1,7 +1,7 @@
 # Ziran Shaders
 Presenting Ziran Shaders!  
 
-<img src="https://cdn.hackclub.com/019e3799-fe3d-7a18-b5b0-915c8e9d1edc/9c0cda01f7bf0ddafbaa23b6fedeb8116d032cac_96.webp" alt="Logo" width="200">
+<img src="https://cdn.hackclub.com/019e3af3-82a2-76ba-882e-a7c6377bcbae/pack.png.png" alt="Logo" width="512">
   
 A Minecraft Shaderpack that is optimized for low-end pcs but it runs very well on high-end pcs as well! 
 Ziran actually means Nature in Mandarin Chinese.  
