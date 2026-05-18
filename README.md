@@ -3,7 +3,7 @@ Presenting Ziran Shaders!
 
 <img src="https://cdn.hackclub.com/019e3af3-82a2-76ba-882e-a7c6377bcbae/pack.png.png" alt="Logo" width="512">
   
-A Minecraft Shaderpack that is optimized for low-end pcs but it runs very well on high-end pcs as well! 
+A Minecraft Shaderpack that is optimized for low-end pcs but it runs very well on high-end pcs as well!  
 Ziran actually means Nature in Mandarin Chinese.  
 This is my first Minecraft related project and This Shaderpack requires Iris Shaders mod to function properly.  
 This is compleltly open-source and free to use meaning anyone can use this shaderpack and never have to pay anything.  
